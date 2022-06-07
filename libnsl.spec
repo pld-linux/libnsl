@@ -6,7 +6,7 @@ Summary:	Library containing NIS functions using TI-RPC (IPv6 enabled)
 Summary(pl.UTF-8):	Biblioteka zawierająca funkcje NIS wykorzystujące TI-RPC (z obsługą IPv6)
 Name:		libnsl
 Version:	1.3.0
-Release:	2
+Release:	3
 License:	LGPL v2.1
 Group:		Libraries
 #Source0Download: https://github.com/thkukuk/libnsl/releases
@@ -14,11 +14,11 @@ Source0:	https://github.com/thkukuk/libnsl/releases/download/v%{version}/%{name}
 # Source0-md5:	9214f674bd0c2bcfdd6c1da0cadb061f
 URL:		https://github.com/thkukuk/libnsl
 BuildRequires:	gettext-tools >= 0.19.2
-BuildRequires:	libtirpc-devel >= 1.0.1
+BuildRequires:	libtirpc-devel >= 1:1.0.3
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	libtirpc >= 1.0.1
+Requires:	libtirpc >= 1:1.0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,7 +48,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 # libnsl used to be part of glibc
 Requires:	glibc-devel >= 6:2.32
-Requires:	libtirpc-devel >= 1.0.1
+Requires:	libtirpc-devel >= 1:1.0.3
 
 %description devel
 Header files for libnsl library.
