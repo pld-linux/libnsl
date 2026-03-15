@@ -5,13 +5,13 @@
 Summary:	Library containing NIS functions using TI-RPC (IPv6 enabled)
 Summary(pl.UTF-8):	Biblioteka zawierająca funkcje NIS wykorzystujące TI-RPC (z obsługą IPv6)
 Name:		libnsl
-Version:	1.3.0
-Release:	3
+Version:	2.0.1
+Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 #Source0Download: https://github.com/thkukuk/libnsl/releases
 Source0:	https://github.com/thkukuk/libnsl/releases/download/v%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	9214f674bd0c2bcfdd6c1da0cadb061f
+# Source0-md5:	fb178645dfa85ebab0f1e42e219b42ae
 URL:		https://github.com/thkukuk/libnsl
 BuildRequires:	gettext-tools >= 0.19.2
 BuildRequires:	libtirpc-devel >= 1:1.0.3
@@ -99,24 +99,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS README
 /%{_lib}/libnsl.so.*.*.*
-%ghost /%{_lib}/libnsl.so.2
+%ghost /%{_lib}/libnsl.so.3
 
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/libnsl.so
 %dir %{_includedir}/rpcsvc
-%{_includedir}/rpcsvc/nis.h
-%{_includedir}/rpcsvc/nis_callback.h
-%{_includedir}/rpcsvc/nis_tags.h
-%{_includedir}/rpcsvc/nislib.h
 %{_includedir}/rpcsvc/yp.h
 %{_includedir}/rpcsvc/yp_prot.h
 %{_includedir}/rpcsvc/ypclnt.h
 %{_includedir}/rpcsvc/yppasswd.h
 %{_includedir}/rpcsvc/ypupd.h
-%{_includedir}/rpcsvc/nis.x
-%{_includedir}/rpcsvc/nis_callback.x
-%{_includedir}/rpcsvc/nis_object.x
 %{_includedir}/rpcsvc/yp.x
 %{_includedir}/rpcsvc/yppasswd.x
 %{_pkgconfigdir}/libnsl.pc
