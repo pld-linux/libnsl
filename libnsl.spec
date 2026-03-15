@@ -98,12 +98,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS README
-%attr(755,root,root) /%{_lib}/libnsl.so.*.*.*
-%attr(755,root,root) %ghost /%{_lib}/libnsl.so.2
+/%{_lib}/libnsl.so.*.*.*
+%ghost /%{_lib}/libnsl.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libnsl.so
+%{_libdir}/libnsl.so
 %dir %{_includedir}/rpcsvc
 %{_includedir}/rpcsvc/nis.h
 %{_includedir}/rpcsvc/nis_callback.h
