@@ -5,6 +5,7 @@
 Summary:	Library containing NIS functions using TI-RPC (IPv6 enabled)
 Summary(pl.UTF-8):	Biblioteka zawierająca funkcje NIS wykorzystujące TI-RPC (z obsługą IPv6)
 Name:		libnsl
+# version 2.0.x (with new soname and nisplus support removed) prepared on DEVEL-2 branch
 Version:	1.3.0
 Release:	3
 License:	LGPL v2.1
